@@ -1,0 +1,22 @@
+#include <stdio.h>
+void printPascal(int n) {
+    for (int line = 1; line <= n; line++) {
+        for (int k = 0; k < n - line; k++) {
+            printf(" ");
+        }
+        int C = 1; 
+        for (int i = 1; i <= line; i++) {
+            printf("%d ", C);
+            C = C * (line - i) / i;
+        }
+        printf("\n");
+    }
+}
+int main() {
+	 printf("D.keshav reddy (192210248)\n");
+    int n;
+    printf("Enter the number of lines for Pascal's Triangle: ");
+    scanf("%d", &n);
+    printPascal(n);
+    return 0;
+}
